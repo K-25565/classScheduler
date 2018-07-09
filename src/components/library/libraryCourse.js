@@ -1,9 +1,13 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import * as actions from "../../actions";
+
 import Icon from '../icon';
 import Arrow from "../arrow";
 import Action from "../action";
+import ScheduleCourse from "../schedule/scheduleCourse";
 
-export default class LibraryCourse extends Component {
+class LibraryCourse extends Component {
    render() {
       return (
          <div className="library-course">
@@ -13,7 +17,7 @@ export default class LibraryCourse extends Component {
             </div>
 
             <Arrow className="library-course--arrow"/>
-            <Action className="library-course--action"/>
+            <Action className="library-course--action" onClick={this.props.toggleEnrolled(this.props.id)}/>
             <div className="library-course--descriptions">
                 <label>Course Description:</label>
                 <p>{ this.props.description }</p>
@@ -22,3 +26,5 @@ export default class LibraryCourse extends Component {
       );
    }
 };
+
+export default connect(null, actions)(LibraryCourse);

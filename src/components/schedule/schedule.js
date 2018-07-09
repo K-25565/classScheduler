@@ -32,6 +32,6 @@ function mapStateToProps(state) {
     return {
         courses: state.courses
     }
-}
+};
 
 export default connect(mapStateToProps)(Schedule);
