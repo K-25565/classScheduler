@@ -1,11 +1,18 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import * as actions from "../../actions";
 
-export default class ScheduleCourse extends Component {
+import Action from "../action";
+
+class ScheduleCourse extends Component {
    render() {
       return (
          <div className="schedule-course">
-            <label>{this.props.title}</label>
+            <label className="schedule-course--label">{this.props.title}</label>
+            <Action onClick={() => this.props.toggleEnrolled(this.props.id)} className="schedule-course--action"/>
          </div>
       );
    }
 };
+
+export default connect(null, actions)(ScheduleCourse);

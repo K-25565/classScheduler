@@ -20,7 +20,7 @@ class Schedule extends Component {
         return (
              <div className="schedule">
                 <h1 className="schedule--title">My Schedule</h1>
-                { this.renderCourses }
+                { this.renderCourses() }
                 <ProgressTracker />
                 <Gradient />
             </div>
