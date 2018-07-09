@@ -5,22 +5,33 @@ import * as actions from "../../actions";
 import LibraryCourse from "./libraryCourse";
 
 class Library extends Component {
-    componentDidMount() {
+    componentWillMount() {
         this.props.fetchCourses();
     }
 
+    renderCourses() {
+        const data = this.props.courses;
 
-   render() {
+        return data.map((course, index) => {
+            return <LibraryCourse key={index} />
+        })
+    }
 
-      return (
-         <div className="library">
-            <h1 className="library--title">Course Library</h1>
-            <LibraryCourse />
-            <LibraryCourse />
-            <LibraryCourse />
-         </div>
-      );
-   }
+    render() {
+        console.log(this.props.courses);
+        return (
+            <div className="library">
+                <h1 className="library--title">Course Library</h1>
+                { this.renderCourses() }
+            </div>
+        );
+    }
 };
 
-export default connect(null, actions)(Library);
+function mapStateToProps(state) {
+    return {
+        courses: state.courses,
+    }
+}
+
+export default connect(mapStateToProps, actions)(Library);
