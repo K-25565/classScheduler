@@ -12,7 +12,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const createStoreWithMiddleware = applyMiddleware()(compose(window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f)(createStore));
 
 import 'bootstrap/dist/css/bootstrap.css';
-import './style/main.scss';
+import './style/core/main.scss';
 
 function main() {
   ReactDOM.render(

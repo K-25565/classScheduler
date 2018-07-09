@@ -1,11 +1,11 @@
 @import 'variables';
 @import 'methods';
-@import 'library';
-@import 'libraryCourse';
-@import 'arrow';
-@import 'schedule';
-@import 'scheduleCourse';
-@import 'progressTracker';
+@import '../library/library';
+@import '../library/libraryCourse';
+@import '../library/arrow';
+@import '../schedule/schedule';
+@import '../schedule/scheduleCourse';
+@import '../schedule/progressTracker';
 
 .home {
     height: 100vh;
