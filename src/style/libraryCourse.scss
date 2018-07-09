@@ -3,11 +3,18 @@
     grid-template-columns: repeat(auto-fit, 1fr);
     grid-template-rows: 1fr 1fr;
 
-    &--title {
+    background: seagreen;
+
+    &--title-icon {
         grid-row: 1/2;
+        display: flex;
     }
 
     &--description {
         grid-row: 2/3;
+    }
+
+    &--arrow {
+        grid-row: 1/2;
     }
 }
