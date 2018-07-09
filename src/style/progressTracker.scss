@@ -1,0 +1,17 @@
+.progress-tracker {
+    grid-row: progress-s/progress-e;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 75px;
+
+    background-color: $backgroundFadeColor;
+
+    &--title {
+        grid-column: 1/2;
+    }
+
+    &--percentage {
+        grid-column: 2/3;
+    }
+}
