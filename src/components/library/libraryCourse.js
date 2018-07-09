@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import Icon from '../icon';
 
 export default class LibraryCourse extends Component {
    render() {
       return (
          <div className="library-course">
             <label className="library-course--title">Problem Solving</label>
-            {/*Icon goes here*/}
+            { Icon("fas fa-check", "library-course--icon") }
             {/*Arrow goes here*/}
             {/*Action button goes here*/}
             <div className="library-course--descriptions">
