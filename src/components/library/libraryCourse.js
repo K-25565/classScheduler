@@ -53,6 +53,7 @@ class LibraryCourse extends Component {
                     callback={closed => this.handleCallback(closed)}
                 />
                 <Action
+                    id={this.props.id}
                     onClick={() => this.props.toggleEnrolled(this.props.id)}
                     className="library-course--action"
                 />

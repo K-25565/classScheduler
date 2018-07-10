@@ -13,7 +13,14 @@
     &:before {
         content: "";
         display: block;
-        background-color: white;        
+        background-color: white;  
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        transition: all .3s ease;
     }
 
     &:before {
@@ -34,5 +41,15 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+}
+
+.action-remove {
+    &:before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after {
+        transform: translate(-50%, -50%) rotate(-135deg);
     }
 }
