@@ -30,19 +30,23 @@ class LibraryCourse extends Component {
 
     handleCallback = function (closed) {
         this.setState({ closed });
+
+        if (!closed) {
+            document.getElementById("library-course").classList.add("library-course--selected");
+        } else {
+            document.getElementById("library-course").classList.remove("library-course--selected");
+        };
     }.bind(this);
 
      render() {
         this.closed = false;
         return (
-            <div className="library-course">
+            <div id="library-course" className="library-course">
                 <div className="library-course--title-check">
                     <label className="library-course--title">{ this.props.title }</label>
                     { Icon("fas fa-check", "library-course--icon") }
                 </div>
-
                 <div className="library-course--line"></div>
-
                 <Arrow 
                     className="library-course--arrow"
                     id={this.props.id}
@@ -52,7 +56,6 @@ class LibraryCourse extends Component {
                     onClick={() => this.props.toggleEnrolled(this.props.id)}
                     className="library-course--action"
                 />
-
                 { this.renderDescription() }
             </div>
         );

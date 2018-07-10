@@ -6,20 +6,20 @@ export default class Arrow extends Component {
         super(props);
 
         this.state = {
-            status: false
+            closed: false
         };
     };
 
     toggleArrowDirection = function () {
-        this.props.callback(this.state.status);
+        this.props.callback(this.state.closed);
 
-        if (this.state.status) {
+        if (this.state.closed) {
             document.getElementById(this.id).classList.remove("arrow-closed");
         } else {
             document.getElementById(this.id).classList.add("arrow-closed");
         };
 
-        this.setState({ status: !this.state.status });
+        this.setState({ closed: !this.state.closed });
     }.bind(this);
 
     render() {
