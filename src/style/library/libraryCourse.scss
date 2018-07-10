@@ -1,7 +1,9 @@
 .library-course {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 1fr);
-    grid-template-rows: 80px 1fr;
+    grid-template-columns: 1fr 45px 58px;
+    grid-template-rows: 32px [line-s] 20px [line-e] 1fr;
+
+    align-items: center;
 
     &--title-check {
         grid-column: 1;
@@ -11,12 +13,14 @@
 
     &--line {
         grid-column: 1/-1;
-        grid-row: 1/2;
+        grid-row: line-s/line-e;
+        padding-top: 19px;
     }
 
     &--description {
-        grid-row: 2/3;
         grid-column: 1/-1;
+        grid-row: 3/4; //2/3
+        padding-top: 24px;
     }
 
     &--arrow {
@@ -27,11 +31,16 @@
     &--action {
         grid-row: 1/2;
         grid-column: 3;
+
+        justify-self: center;
     }
 }
 
 .library-course {
-    padding: 25px;
+    //padding: 25px;
+    padding-left: 25px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 
     &:hover {
         @include courseHoverEffects;
@@ -56,6 +65,8 @@
 
     &--icon {
         color: $colorBlue;
+        padding-left: 16px;
+        font-size: 24px;
     }
 
     &--description {       
