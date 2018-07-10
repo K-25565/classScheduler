@@ -5,7 +5,8 @@ import * as actions from "../../actions";
 import Icon from '../icon';
 import Arrow from "../arrow";
 import Action from "../action";
-import ScheduleCourse from "../schedule/scheduleCourse";
+
+import AnimateHeight from 'react-animate-height';
 
 class LibraryCourse extends Component {
 
@@ -14,28 +15,23 @@ class LibraryCourse extends Component {
 
         this.state = {
             closed: true,
+            height: 0,
         };
     };
 
-    renderDescription = function() {
-        if (!this.state.closed) {
-            return (
-                <div className="library-course--description">
-                    <label>Course Description:</label>
-                    <p>{ this.props.description }</p>
-                </div>
-            );
-        };
-    }.bind(this);
-
     handleCallback = function (closed) {
-        this.setState({ closed });
+        let height = this.state.height == 0 ? 80 : 0;
 
         if (!closed) {
             document.getElementById(this.id).classList.add("library-course--selected");
         } else {
             document.getElementById(this.id).classList.remove("library-course--selected");
         };
+
+        this.setState({
+            closed,
+            height,
+        });
     }.bind(this);
 
      render() {
@@ -58,7 +54,15 @@ class LibraryCourse extends Component {
                     onClick={() => this.props.toggleEnrolled(this.props.id)}
                     className="library-course--action"
                 />
-                { this.renderDescription() }
+                <AnimateHeight
+                    duration={ 300 }
+                    height={ this.state.height }
+                >
+                    <div className="library-course--description">
+                        <label>Course Description:</label>
+                        <p>{ this.props.description }</p>
+                    </div>
+                </AnimateHeight>
             </div>
         );
     };
