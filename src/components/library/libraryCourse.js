@@ -32,25 +32,26 @@ class LibraryCourse extends Component {
         this.setState({ closed });
 
         if (!closed) {
-            document.getElementById("library-course").classList.add("library-course--selected");
+            document.getElementById(this.id).classList.add("library-course--selected");
         } else {
-            document.getElementById("library-course").classList.remove("library-course--selected");
+            document.getElementById(this.id).classList.remove("library-course--selected");
         };
     }.bind(this);
 
      render() {
+        this.id = `library-course-${this.props.id}`;
         this.closed = false;
         return (
-            <div id="library-course" className="library-course">
+            <div id={this.id} className="library-course">
                 <div className="library-course--title-check">
                     <label className="library-course--title">{ this.props.title }</label>
                     { Icon("fas fa-check", "library-course--icon") }
                 </div>
                 <div className="library-course--line"></div>
                 <Arrow 
-                    className="library-course--arrow"
                     id={this.props.id}
                     callback={closed => this.handleCallback(closed)}
+                    className="library-course--arrow"
                 />
                 <Action
                     id={this.props.id}
