@@ -16,9 +16,11 @@ class LibraryCourse extends Component {
                 { Icon("fas fa-check", "library-course--icon") }
             </div>
 
+            <div className="library-course--line"></div>
+            
             <Arrow className="library-course--arrow"/>
             <Action onClick={() => this.props.toggleEnrolled(this.props.id)} className="library-course--action"/>
-            <div className="library-course--descriptions">
+            <div className="library-course--description">
                 <label>Course Description:</label>
                 <p>{ this.props.description }</p>
             </div>

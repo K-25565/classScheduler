@@ -3,22 +3,70 @@
     grid-template-columns: repeat(auto-fit, 1fr);
     grid-template-rows: repeat(auto-fit, 1fr);
 
-    background: $gradientColorEnd;
-
     &--title-check {
+        grid-column: 1;
         grid-row: 1/2;
         display: flex;
     }
 
+    &--line {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+
     &--description {
         grid-row: 2/3;
+        grid-column: 1/-1;
     }
 
     &--arrow {
         grid-row: 1/2;
+        grid-column: 2;
     }
 
     &--action {
         grid-row: 1/2;
+        grid-column: 3;
+    }
+}
+
+.library-course {
+    padding: 25px;
+
+    &:hover {
+        background: white;
+        box-shadow: 0 2px 10px 0 $backgroundFadeColorTwo;
+    }
+
+
+    &--title {
+        color: $colorGrey;
+        font-family: $fontTwo;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    &--line {
+        border-bottom: 1px solid $colorLightGrey;
+    }
+
+    &--icon {
+        color: $colorBlue;
+    }
+
+    &--description {       
+        label {
+            color: $colorBlue;
+            font-family: $fontOne;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        p {
+            color: $colorGrey;
+            font-family: $fontTwo;
+            font-size: 16px;
+        }
     }
 }
