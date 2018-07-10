@@ -74,6 +74,12 @@ export function fetchCourses() {
                 description: "Learn how to build powerful applications using this comprehensive guide to the Ruby on Rails web framework.",
                 enrolled: false,
             },
+            {
+                id: 10,
+                title: "Example of a Large Description",
+                description: "Lorem ipsum dolor sit amet, vel ea dicam nominavi, viris deserunt delicata per at, ea noster cetero gloriatur est. At case habemus vis, elit mazim eos ut, quaeque euripidis disputationi eum ea. Dicat aperiri scripserit et qui, eam ad quem facilis. Te dictas sadipscing vim.Viderer nostrud abhorreant vis no, ei vim dolorem expetendis, ex omnesque ocurreret adolescens nec. Nec amet adipisci contentiones ea. Sumo dicam pro at. Illud regione usu cu, in mei dolor discere facilis. Te iudico nominati concludaturque pri. Epicuri patrioque signiferumque vel ne, pri verear fierent delicatissimi cu. Id eos quidam melius dissentias.",
+                enrolled: false,
+            },
         ],
     }
 }
