@@ -13,12 +13,12 @@ class LibraryCourse extends Component {
         super(props);
 
         this.state = {
-            status: true,
+            closed: true,
         };
     };
 
     renderDescription = function() {
-        if (!this.state.status) {
+        if (!this.state.closed) {
             return (
                 <div className="library-course--description">
                     <label>Course Description:</label>
@@ -28,12 +28,12 @@ class LibraryCourse extends Component {
         };
     }.bind(this);
 
-    handleCallback = function (status) {
-        this.setState({ status });
+    handleCallback = function (closed) {
+        this.setState({ closed });
     }.bind(this);
 
      render() {
-        this.status = false;
+        this.closed = false;
         return (
             <div className="library-course">
                 <div className="library-course--title-check">
@@ -46,7 +46,7 @@ class LibraryCourse extends Component {
                 <Arrow 
                     className="library-course--arrow"
                     id={this.props.id}
-                    callback={status => this.handleCallback(status)}
+                    callback={closed => this.handleCallback(closed)}
                 />
                 <Action
                     onClick={() => this.props.toggleEnrolled(this.props.id)}
