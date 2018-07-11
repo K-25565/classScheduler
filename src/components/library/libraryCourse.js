@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../../actions";
 
-import Icon from '../icon';
-import Arrow from "../arrow";
-import Action from "../action";
+import Icon from './icon';
+import Arrow from "./arrow";
+import Action from "../core/action";
 
 import AnimateHeight from 'react-animate-height';
 

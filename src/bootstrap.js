@@ -5,7 +5,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 
 
 
-import Home from './components/home';
+import Home from './components/core/home';
 import reducers from './reducers';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
