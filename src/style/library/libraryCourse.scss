@@ -6,7 +6,7 @@
     align-items: center;
     z-index: 50;
 
-    //margin-right: 20px; // should be 15px but is set to 20px because it looks better --> this is disabled because it looks better without this.
+    margin-right: 5px; // this offsets the scrollbar being funky
 
     &--title-check {
         grid-column: 1/2;
