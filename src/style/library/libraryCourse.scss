@@ -6,6 +6,8 @@
     align-items: center;
     z-index: 50;
 
+    //margin-right: 20px; // should be 15px but is set to 20px because it looks better --> this is disabled because it looks better without this.
+
     &--title-check {
         grid-column: 1;
         grid-row: 1/2;

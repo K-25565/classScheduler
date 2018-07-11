@@ -1,22 +1,39 @@
 .library {
     grid-column: library-s/library-e;
-    grid-row: 1/-1;
+    grid-row: 1/-1;   
 
-    display: grid;
-    grid-template-rows: [title-s] 100px  [title-e courses-s] repeat(auto-fit, 1fr) [courses-e];
-    grid-row-gap: 22px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 
-    padding-left: 100px;
-    padding-top: 100px;
+    position: relative;
 
-    &--title {
-        color: $colorBlue;
-        font-family: $fontOne;
-        font-size: 34px;
-        font-weight: bold;
+    &--container {
+        display: grid;
+        grid-template-rows: [title-s] 100px  [title-e courses-s] repeat(auto-fit, 1fr) [courses-e];
+        grid-row-gap: 22px;
 
-        border-left: 2px solid $colorBlue;
-        padding: 20px 40px;
+        padding-top: 7%;
+        padding-left: 5%;
+        padding-bottom: 76px; //why don't you work!?!?!?
+
+        overflow-y: scroll;
+
+        height: 100%;
+        width: 100%;
+
+        position: absolute;
+        right: -15px;
+
+        &--title {
+            color: $colorBlue;
+            font-family: $fontOne;
+            font-size: 34px;
+            font-weight: bold;
+    
+            border-left: 2px solid $colorBlue;
+            padding: 20px 40px;
+        }
     }
 }
 
