@@ -1,5 +1,4 @@
 .schedule-course {
-    position: relative;
     display: grid;
     grid-template-columns: [title-s]1fr [action-s] 32px [action-e space-s] 12px [space-e title-e];
     grid-template-rows: 1fr;
