@@ -41,7 +41,7 @@ class LibraryCourse extends Component {
             <div id={this.id} className="library-course">
                 <div className="library-course--title-check">
                     <div className="library-course--title">{ this.props.title }</div>
-                    { Icon("fas fa-check", "library-course--icon") }
+                    { this.props.enrolled ? Icon("fas fa-check", "library-course--icon") : null}
                 </div>
                 <Arrow 
                     id={this.props.id}
@@ -51,7 +51,7 @@ class LibraryCourse extends Component {
                 <Action
                     id={this.props.id}
                     onClick={() => this.props.toggleEnrolled(this.props.id)}
-                    className="library-course--action"
+                    className={`library-course--action ${this.props.enrolled ? "action-remove" : null}`}
                 />
                 <AnimateHeight
                     duration={ 300 }
