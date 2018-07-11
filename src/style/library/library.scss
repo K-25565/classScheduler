@@ -13,9 +13,9 @@
         grid-template-rows: [title-s] 100px  [title-e courses-s] repeat(auto-fit, 1fr) [courses-e];
         grid-row-gap: 22px;
 
-        padding-top: 7%;
-        padding-left: 5%;
-        padding-bottom: 76px; //why don't you work!?!?!?
+        @include formatForBrowsers(padding-top, 7%);
+        @include formatForBrowsers(padding-left, 5%);
+        @include formatForBrowsers(padding-bottom, 76px);
         overflow-y: scroll;
 
         height: 100%;

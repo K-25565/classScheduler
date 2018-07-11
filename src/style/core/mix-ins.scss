@@ -2,7 +2,7 @@
     -webkit-#{$command}: $params;
     -moz-#{$command}: $params;
     -o-#{$command}: $params;
-    $command: $params;
+    #{$command}: $params;
 }
 
 @mixin courseHoverEffects {
