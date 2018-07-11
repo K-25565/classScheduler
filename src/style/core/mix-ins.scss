@@ -9,3 +9,10 @@
     background: white;
     box-shadow: 0 2px 10px 0 $backgroundFadeColorTwo;
 }
+
+@mixin borderLeft {
+    border-left: 2px solid $colorSubtleGrey;
+    padding-left: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}

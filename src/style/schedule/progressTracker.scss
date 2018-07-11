@@ -1,17 +1,36 @@
 .progress-tracker {
     grid-row: progress-s/progress-e;
+    align-self: end;
 
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 75px;
+    grid-template-columns: 33px [title-s] 1fr [title-e percentage-s] 76px [percentage-e];
 
-    background-color: $backgroundFadeColorOne;
+    @include borderLeft;
 
     &--title {
-        grid-column: 1/2;
+        grid-column: title-s/title-e;
+        grid-row: 1;
     }
 
     &--percentage {
-        grid-column: 2/3;
+        grid-column: percentage-s/percentage-e;
+        grid-row: 1;
+
+        justify-self: center;
+    }
+}
+
+.progress-tracker {
+    background-color: $backgroundFadeColorOne;
+    width: 100%;
+    height: 76px; 
+
+    font-family: $fontOne;
+    font-size: 16px;
+    color: white;
+
+    &--title {
+        @include borderLeft;
     }
 }

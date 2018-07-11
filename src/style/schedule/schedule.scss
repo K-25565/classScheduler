@@ -6,7 +6,7 @@
     width: 100%;
 
     display: grid;
-    grid-template-rows: 100px repeat(5, 80px) [progress-s] 76px [progress-e];
+    grid-template-rows: [space-one-s] 1fr [space-one-e title-s] 100px [title-e] repeat(5, 80px) [progress-s] 1fr [progress-e];
     grid-row-gap: 22px;
     align-items: center;
     justify-items: center;
@@ -14,12 +14,13 @@
     align-content: center;
 
     &--title {
-        border-left: 1px solid $colorSubtleGrey;
-        padding-left: 30px;
+        grid-row: title-s/title-e;
 
         color: white;
         font-family: $fontOne;
-        font-size: 30px; // formerly 20px --> 30px seems to work better
+        font-size: 20px; // formerly 30px --> 20px for now
         text-align: center;
+
+        @include borderLeft;
     }
 }
