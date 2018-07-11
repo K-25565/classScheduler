@@ -5,8 +5,8 @@
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 33px [title-s] 1fr [title-e percentage-s] 76px [percentage-e];
-
-    @include borderLeft;
+    
+    position: absolute;
 
     &--title {
         grid-column: title-s/title-e;
