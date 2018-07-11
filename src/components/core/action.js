@@ -4,20 +4,16 @@ export default class Action extends Component {
 
     constructor(props) {
         super(props);
-
-        this.status = false;
     }
 
     handleAction = function() {
         this.props.onClick();
 
-        if (this.status) {
-            document.getElementById(this.id).classList.remove("action-remove");
-        } else {
+        if (this.props.enrolled) {
             document.getElementById(this.id).classList.add("action-remove");
-        };
-
-        this.status = !this.status;
+        } else {
+            document.getElementById(this.id).classList.remove("action-remove");
+        }
     }.bind(this);
 
     render() {
